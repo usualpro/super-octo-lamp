@@ -1,5 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
+import { Howl } from 'howler';
+
+const monSonAJouer = new Howl({
+  src: 'click.mp3',
+  autoplay: false
+});
 
 export default function Home() {
   return (
@@ -24,6 +30,7 @@ export default function Home() {
           </section>
         </section>
       </section>
+      <button onClick={() => monSonAJouer.play()} className='nes-btn is-primary'>Click Me</button>
     </div>
   )
 }
