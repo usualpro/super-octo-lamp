@@ -24,9 +24,15 @@ export default function Home() {
           </section>
           <section className='message -right'>
             <div className="nes-balloon from-right">
-              <p>Hello nes.css Hello nes.cssHello nes.cssHello nes.cssHello nes.cssHello nes.css</p>
+              <p>Hello nes.css</p>
             </div>
             <i className='nes-bcrikko'></i>
+          </section>
+          <section className='message -left'>
+            <i className='nes-bcrikko'></i>
+            <div className="nes-balloon from-left">
+              <p>Hello nes.css</p>
+            </div>
           </section>
         </section>
       </section>
