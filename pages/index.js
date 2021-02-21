@@ -14,29 +14,29 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className='nes-container'>
-        <section className='message-list'>
-          <section className='message -left'>
-            <i className='nes-bcrikko'></i>
-            <div className="nes-balloon from-left">
+      <div className="container d-grid gap-5 py-5 col-12 col-sm-10 col-md-8 col-lg-6 col-lg-4">
+        <div className="row justify-content-between align-items-end">
+          <div className="col-auto">
+            <i className="nes-bcrikko"></i>
+          </div>
+          <div className="col py-4">
+            <div className="nes-balloon from-left m-0 w-100">
               <p>Hello nes.css</p>
             </div>
-          </section>
-          <section className='message -right'>
-            <div className="nes-balloon from-right">
+          </div>
+        </div>
+        <div className="row justify-content-between align-items-end">
+          <div className="col py-4">
+            <div className="nes-balloon from-right m-0 w-100">
               <p>Hello nes.css</p>
             </div>
-            <i className='nes-bcrikko'></i>
-          </section>
-          <section className='message -left'>
-            <i className='nes-bcrikko'></i>
-            <div className="nes-balloon from-left">
-              <p>Hello nes.css</p>
-            </div>
-          </section>
-        </section>
-      </section>
-      <button onClick={() => monSonAJouer.play()} className='nes-btn is-primary'>Click Me</button>
+          </div>
+          <div className="col-auto">
+            <i className="nes-bcrikko"></i>
+          </div>
+        </div>
+        <button onClick={() => monSonAJouer.play()} className='nes-btn is-primary'>Click Me</button>
+      </div>
     </div>
   )
 }
