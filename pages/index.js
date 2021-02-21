@@ -1,42 +1,18 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
-import { Howl } from 'howler';
+import ChatBot from '../components/ChatBot';
 
-const monSonAJouer = new Howl({
-  src: 'click.mp3',
-  autoplay: false
-});
+const Home = ({ sequence }) => <div>
+  <Head>
+    <title>Simple ChatBot example</title>
+    <link rel="icon" href="/favicon.ico" />
+  </Head>
+  <ChatBot {...sequence} />
+</div>;
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <section className='nes-container'>
-        <section className='message-list'>
-          <section className='message -left'>
-            <i className='nes-bcrikko'></i>
-            <div className="nes-balloon from-left">
-              <p>Hello nes.css</p>
-            </div>
-          </section>
-          <section className='message -right'>
-            <div className="nes-balloon from-right">
-              <p>Hello nes.css</p>
-            </div>
-            <i className='nes-bcrikko'></i>
-          </section>
-          <section className='message -left'>
-            <i className='nes-bcrikko'></i>
-            <div className="nes-balloon from-left">
-              <p>Hello nes.css</p>
-            </div>
-          </section>
-        </section>
-      </section>
-      <button onClick={() => monSonAJouer.play()} className='nes-btn is-primary'>Click Me</button>
-    </div>
-  )
+Home.getInitialProps = async (ctx) => {
+  const res = await fetch('https://run.mocky.io/v3/7479afe7-b3d4-4a1a-b583-b3f252884523');
+  const json = await res.json();
+  return { sequence: json };
 }
+
+export default Home;

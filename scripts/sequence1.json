@@ -1,0 +1,29 @@
+{
+    "startWithAnchor": "phrase-1",
+    "data": [
+        {
+            "id": "phrase-1",
+            "content": "Bonjour je suis un bot lol :)",
+            "timeBeforeNextPhrase": 2000,
+            "nextPhraseId": "phrase-2"
+        },
+        {
+            "id": "phrase-2",
+            "content": "Comment allez vous ?",
+            "timeBeforeNextPhrase": 5000,
+            "nextPhraseId": "phrase-3",
+            "answerType": "text"
+        },
+        {
+            "id": "phrase-3",
+            "content": "Pourriez vous m'en dire plus ?",
+            "timeBeforeNextPhrase": 5000,
+            "nextPhraseId": "conclusion",
+            "answerType": "text"
+        },
+        {
+            "id": "conclusion",
+            "content": "Merci de votre retour !"
+        }
+    ]
+}
